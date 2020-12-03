@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<style>
+    .caja{
+      background-color: rgba(255, 255, 255, 0.774);
+      border-style: solid;
+      width: 45%;
+      padding: 1%;
+      margin: auto;
+      margin-top: 80px;
+      margin-block-end: 80px;
+    }
+</style>
+<div class="caja">
+    <br>
+ <h1 style="color: black;">PROXIMOS PRODUCTOS: </h1>
+<br>
+{% if producto_list %}
+<ul>
+
+    {% for producto in producto_list %}
+    <li>
+        <a style="font-size: 25px ;"  href="{{ producto.get_absolute_url }}" > {{producto.nombre}} </a>
+        <strong><a style="font-size: 20px;"> / Descripción : </a> </strong> <a style="font-size: 20px ; color: black;"> {{producto.descripcion}}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% else %}
+    <p>No hay sugerencias.</p>
+{% endif %}
+</div>
+<br>
+
+
+{% endblock %}

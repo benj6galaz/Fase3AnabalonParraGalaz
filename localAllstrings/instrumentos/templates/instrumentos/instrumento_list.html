@@ -1,11 +1,22 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<br>
- <h1 style="color: black;">LISTA DE SUGERENCIAS: </h1>
-<br>
-<div style="background-color: white; padding: 5px; border-style: solid; ">
-{% if instrumento_list %}
+
+<style>
+    .caja{
+      background-color: rgba(255, 255, 255, 0.774);
+      border-style: solid;
+      width: 80%;
+      padding: 1%;
+      margin: auto;
+      margin-top: 80px;
+      margin-block-end: 80px;
+    }
+  </style>
+
+<div class="caja">
+{% if instrumento_list %} 
+<h1 style="color: black;">LISTA DE SUGERENCIAS: </h1>
 <ul>
 
     {% for instrumento in instrumento_list %}
@@ -20,14 +31,5 @@
     <p>No hay sugerencias.</p>
 {% endif %}
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 {% endblock %}

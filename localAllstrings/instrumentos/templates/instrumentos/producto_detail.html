@@ -1,0 +1,43 @@
+{% extends "base_generic.html" %}
+
+
+
+{% block content %}
+{% load static %}
+<style>
+  .caja{
+    background-color: rgba(255, 255, 255, 0.774);
+    border-style: solid;
+    width: 45%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 80px;
+    margin-block-end: 80px;
+  }
+</style>
+
+
+<div class="caja">
+<h1 style="color: black;">PROXIMO PRODUCTO AGREGADO:  </h1>
+
+<br>
+<br>
+<div class="container d-flex flex-column"> 
+    <h1  style="color: black;"> Nombre Proximo Producto: {{producto.nombre}}</h1>
+    <h2 style="color: black;">  Descripcion : {{producto.descripcion}}</h2>
+    <br>
+    <br>
+    <br>
+        <a class="btn btn-primary" href="{% url 'producto_update' pk=producto.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="{% url 'producto_delete' pk=producto.pk %}">Eliminar   <span class="glyphicon glyphicon-trash"></span></a>
+</div>
+</div>
+</header>
+
+
+
+{% endblock %}
+
+

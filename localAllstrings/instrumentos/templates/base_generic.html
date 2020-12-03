@@ -30,8 +30,6 @@
         background-color:#004d70 ;
         color: azure;
         flex-wrap: wrap;
-        position: absolute;
-
     }
 
     footer a{
@@ -62,8 +60,16 @@
           <div class="collapse navbar-collapse" id="navbar1">
             <ul class="navbar-nav ml-auto"> 
             <li class="nav-item"><a class="nav-link" href="{% url 'index' %}"> Inicio </a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'Login' %}"> Login </a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'Registrar' %}"> Registrarse </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"> Cerrar Sesión </a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Admin  </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'productos' %}"> Visualizar Próximos Productos</a></li>
+                    <li><a class="dropdown-item" href="{% url 'producto_create' %}"> Agregar Próximos Productos</a></li>
+
+                </ul>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Productos  </a>
                 <ul class="dropdown-menu">
@@ -77,6 +83,7 @@
                     <li><a class="dropdown-item" href="#"> Otros</a></li>
                 </ul>
             </li>
+            
         
             </ul>
           </div>
@@ -85,76 +92,78 @@
     </header> 
     {% block content %}{% endblock %}    
   <!--FOOTER-->
-    <footer >
-            <div class="futer">
-                <div class="container text-md-left">
-                    <div class="row">
-                        <div class="col-md-2 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    +5695465345
-                                </li>
-                                <li>
-                                    AllStrings@gmail.cl
-                                </li>
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                        <div class="col-md-2 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Redes Sociales</h5>
-                            <ul class="list-unstyled">
+    <footer>
+        <br>
+        <br>
+        <div class="futer">
+            <div class="container text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
+                        <ul class="list-unstyled">
                             <li>
-                                Facebook
+                                +5695465345
                             </li>
                             <li>
-                                Twitter
+                                AllStrings@gmail.cl
                             </li>
-                            <li>
-                                Instagram
-                            </li>
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                        <div class="col-md-2 mx-auto">
-                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Información</h5>
-                            <ul class="list-unstyled">
-                            <p>
-                                Somos una tienda dedicada a productos musicales de todo tipo, ya sean instrumentos, accesorios, componentes, entre otros
-                            </p>
-                            
-                            </ul>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none">
-                            <div class="col-md-2 mx-auto">
-                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Ubicación</h5>
-                                <ul class="list-unstyled">
-                                <li>
-                                    Canada #3574 Maipú
-                                </li>
-                                </ul>
-                            </div>
-                        <hr class="clearfix w-100 d-md-none">
-                            <div class="col-md-2 mx-auto">
-                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sugerencias</h5>
-                                <ul class="list-unstyled">
-                                <li>
-                                    Mandanos tus sugerencias o peticiones sobre algún producto <a href="{% url 'instrumento_create' %}">haciendo click aquí</a>
-                                </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-2 mx-auto">
-                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lista de Sugerencias</h5>
-                                <ul class="list-unstyled">
-                                <li>
-                                    Si quieres ver la lista de sugerencias, <a href="{% url 'instrumentos' %}">click aquí</a>
-                                </li>
-                                </ul>
-                            </div>        
+                        </ul>
                     </div>
-
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Redes Sociales</h5>
+                        <ul class="list-unstyled">
+                        <li>
+                            Facebook
+                        </li>
+                        <li>
+                            Twitter
+                        </li>
+                        <li>
+                            Instagram
+                        </li>
+                        </ul>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                    <div class="col-md-2 mx-auto">
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Información</h5>
+                        <ul class="list-unstyled">
+                        <p>
+                            Somos una tienda dedicada a productos musicales de todo tipo, ya sean instrumentos, accesiorios, componentes, entre otros
+                        </p>
+                        
+                        </ul>
+                    </div>
+                    <hr class="clearfix w-100 d-md-none">
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Ubicación</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                Canada #3574 Maipú
+                            </li>
+                            </ul>
+                        </div>
+                    <hr class="clearfix w-100 d-md-none">
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sugerencias</h5>
+                            
+                            <ul class="list-unstyled">
+                            <li>
+                                Mandanos tus sugerencias o peticiones sobre algún producto <a href="{% url 'instrumento_create' %}">haciendo click aquí</a>
+                            </li>
+                            </ul>
+                        </div>    
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lista de Sugerencias</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                Si quieres ver la lista de sugerencias, <a href="{% url 'instrumentos' %}">click aquí</a>
+                            </li>
+                            </ul>
+                        </div>        
+                </div>
             </div>
-        
+        </div>
     </footer>
 </body>
 </html>

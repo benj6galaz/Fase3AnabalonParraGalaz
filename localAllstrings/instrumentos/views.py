@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Instrumento
+from .models import Instrumento, Producto
 
 
 # Create your views here.
@@ -99,4 +99,24 @@ class InstrumentoDetailView(generic.DetailView):
  
 class InstrumentoListView(generic.ListView):   
      model = Instrumento
-     paginate_by = 20
+     paginate_by = 10
+
+# CRUD PRODUCTO
+class ProductoCreate(CreateView):
+    model = Producto
+    fields = ['id', 'nombre', 'descripcion']
+
+class ProductoUpdate(UpdateView):
+    model = Producto
+    fields = ['id','nombre', 'descripcion']
+
+class ProductoDelete(DeleteView):
+    model = Producto
+    success_url = reverse_lazy('index')
+
+class ProductoDetailView(generic.DetailView):
+    model = Producto
+
+class ProductoListView(generic.ListView):   
+     model = Producto
+     paginate_by = 10

@@ -63,6 +63,14 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"> Login </a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"> Cerrar Sesión </a></li>
             <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Admin  </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'productos' %}"> Visualizar Próximos Productos</a></li>
+                    <li><a class="dropdown-item" href="{% url 'producto_create' %}"> Agregar Próximos Productos</a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Productos  </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{% url 'Guitarras' %}"> Guitarras</a></li>
@@ -75,6 +83,7 @@
                     <li><a class="dropdown-item" href="#"> Otros</a></li>
                 </ul>
             </li>
+            
         
             </ul>
           </div>
@@ -134,15 +143,24 @@
                             </li>
                             </ul>
                         </div>
-                    <hr class="clearfix w-100 d-md-none">
+                        <hr class="clearfix w-100 d-md-none">
                         <div class="col-md-2 mx-auto">
                             <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sugerencias</h5>
+                            
                             <ul class="list-unstyled">
                             <li>
-                                Mandanos tus sugerencias o peticiones sobre algún producto <a href="{% url 'instrumentos' %}">haciendo click aquí</a>
+                                Mandanos tus sugerencias o peticiones sobre algún producto <a href="{% url 'instrumento_create' %}">haciendo click aquí</a>
                             </li>
                             </ul>
                         </div>    
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lista de Sugerencias</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                Si quieres ver la lista de sugerencias, <a href="{% url 'instrumentos' %}">click aquí</a>
+                            </li>
+                            </ul>
+                        </div>            
                 </div>
             </div>
         </div>

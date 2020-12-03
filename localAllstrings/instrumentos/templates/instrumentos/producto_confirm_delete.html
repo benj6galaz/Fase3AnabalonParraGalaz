@@ -3,7 +3,6 @@
 {% block content %}
 
 {% load static %}
-
 <style>
     .caja{
       background-color: rgba(255, 255, 255, 0.774);
@@ -17,11 +16,11 @@
 </style>
 <div class="caja" align=center style="font-weight: 600; font-size: 30px;"> 
 <h1 style="font-size: 40px;">Eliminar Sugerencia</h1>
-<p>¿Estas seguro de querer eliminar esta sugerencia {{Instrumento.nombre}}?</p>
+<p>¿Estas seguro de querer eliminar esta sugerencia {{producto.nombre}}?</p>
 <form action="" method="POST">
     {% csrf_token %}
     <button type="submit" class="save btn btn-primary btn-xl" style="font-size: 30px;">Borrar Sugerencia</button>
 </form>
 </div>
-
+<br>
 {% endblock %}
