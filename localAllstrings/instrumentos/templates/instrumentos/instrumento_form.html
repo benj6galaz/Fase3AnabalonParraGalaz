@@ -1,0 +1,45 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<style>
+.caja{
+    height: 600px ;
+}
+</style>
+<div class="caja">
+
+    <div class="container">
+
+        <h2 style="font-size:50px; color: black; text-align: center;"> SUGERENCIA</h2>
+        <br>
+        <br>
+    <form method="POST" class="post-form" >{% csrf_token %}
+        <div  style="font-size: 25px;">
+            {{ form.as_p }}
+        </div>
+        <br><br><br><br>
+        <button type="submit" class="save btn btn-primary btn-xl" href="{% url 'index' %}" style="float: right;">Guardar</button>
+        <br><br>
+    </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
+

@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<br>
+ <h1 style="color: black;">LISTA DE SUGERENCIAS: </h1>
+<br>
+<div style="background-color: white; padding: 5px; border-style: solid; ">
+{% if instrumento_list %}
+<ul>
+
+    {% for instrumento in instrumento_list %}
+    <li>
+        <a style="font-size: 25px ;"  href="{{ instrumento.get_absolute_url }}" > {{ instrumento.nombre}} </a>
+        <strong><a style="font-size: 20px;"> / Descripción : </a> </strong> <a style="font-size: 20px ; color: black;"> {{instrumento.descripcion}}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+{% else %}
+    <p>No hay sugerencias.</p>
+{% endif %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

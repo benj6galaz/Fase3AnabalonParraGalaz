@@ -1,0 +1,171 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+  
+  {% load static %}
+  <!--ESTILOS-->
+  <style>
+
+
+    input {
+       
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        clear: both;
+        width: 180px;
+    }
+
+    button {
+        clear: both;
+        width: 100px;
+        margin-left: 50px;
+    }
+
+    .error-control {
+        border: 1px solid white;
+    }
+
+    label.error {
+        color: white;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+    color: white;
+    margin: 0px;
+    }
+
+    .cajaformu{
+       background-color:  #006a9b;
+       margin: auto;
+       padding: 50;
+       
+       width: 50%;
+       margin-top: 50px;
+
+   
+      
+        
+        
+    }
+
+    @media screen and (max-width: 768px){
+        .cajaformu{
+            margin-left: 5%;
+            height: 800px;
+        }
+        
+    }
+    
+
+  </style>
+  
+  <script type="text/Javascript">
+    function validacion()
+    {
+        nom= document.getElementById('nombre').value;
+        ape= document.getElementById('apellido').value;
+        reg = document.getElementById('regiones').selectedIndex;
+        dir= document.getElementById('direccion').value;
+        fono = document.getElementById('telefono').value;
+        cor= document.getElementById('correo').value;
+        
+
+        if(nom == null || nom.length==0 || /^\s+$/.test(nom))
+        {
+            alert('Error: debe ingresar un nombre válido');
+            document.getElementById('nombre').value="";
+            document.datos.nom.focus();
+            return false;
+        }
+
+        if(ape == null || ape.length==0 || /^\s+$/.test(ape))
+        {
+            alert('Error: debe ingresar un apellido válido');
+            document.getElementById('apellido').value="";
+            document.datos.ape.focus();
+            return false;
+        } 
+        
+        if (reg == null || reg == 0)
+        {
+            alert('[ERROR] Debe seleccionar una Región');
+            document.datos.region.focus();
+            return false;
+        }
+
+        if(dir == null || dir.length==0 || /^\s+$/.test(dir))
+        {
+            alert('Error: debe ingresar una dirección valida');
+            document.getElementById('direccion').value="";
+            document.datos.dir.focus();
+            return false;
+        }
+
+        if(!(/^\d{9}$/.test(fono)) )
+        {
+            alert('Error: debe ingresar un teléfono válido');
+            document.datos.fono.focus();
+            return false;
+        }
+
+        if(cor == null || cor.length==0 || /^\s+$/.test(cor))
+        {
+            alert('Error: debe ingresar un correo válido');
+            document.getElementById('correo').value="";
+            document.datos.corr.focus();
+            return false;
+        }  
+        alert('!!!FELICIDADES¡¡¡ Tu compra ha sido realizada, nos mantendremos en contacto contigo')
+        return true;                             
+    }
+</script> 
+</head>
+<body>
+ <!--CAJA FORMULARIO-->
+ <div class="cajaformu" align="center">
+    <h1 class="titulofor">Formulario de Compra</h1>
+    <form action="{% url 'index' %}" method="post" name="datos" onsubmit="return validacion()">
+        <label class="nom" for="nombre">Ingrese nombre:</label>
+        <input type="text" name="nom" id="nombre" placeholder="Ingrese su nombre">
+        <br><br>
+        <label class="ape" for="apellido">Ingrese apellido: </label>
+        <input type="text" name="ape" id="apellido" placeholder="Ingrese su apellido">
+        <br><br>
+        <label class="reg" for="regiones">Región</label>
+        <select name="region" id="regiones">
+            <option value="">- Selecciona una opción -</option>
+            <option value="1">Región Metropolitana</option>
+            <option value="2">Región de Valparaiso</option>
+            <option value="3">Región del Bio-Bio</option>
+        </select> 
+        <br><br>
+        <label class="dir" for="direccion">Ingrese dirección:</label>
+        <input type="text" name="dir" id="direccion" placeholder="Ingrese su Dirección">
+        <br><br>
+        <label class="tel" for="teléfono">Número Telefónico: </label>
+        <input type="number" name="fono" id="telefono" placeholder="Ingrese su teléfono">
+        <br><br>
+        <label class="cor" for="correo">Ingrese correo:</label>
+        <input type="text" name="corr" id="correo" placeholder="Ingrese su correo">
+        <br><br> 
+        <input type="submit" value="COMPRAR">
+        
+    </form>
+
+</div> 
+<br>
+<br>
+<br>
+<br><br><br><br>
+
+
+{% endblock %}

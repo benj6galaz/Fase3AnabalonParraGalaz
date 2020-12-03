@@ -1,0 +1,25 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<style>
+  .caja{
+    background-color: rgba(255, 255, 255, 0.774);
+    border-style: solid;
+    width: 35%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 80px;
+    margin-block-end: 200px;
+  }
+</style>
+<div class="caja">
+{% if user.is_authenticated %}
+  <h3>Hola! {{ user.username }}</h3>
+{% else %}
+  <h1 align = center>SESIÓN CERRADA</h1>
+  <p>Para iniciar sesión debes <a href="{% url 'login' %}"> entrar aquí</a></p>
+  <br>
+  <p>Para seguir navegando por nuestra tienda debes <a href="{% url 'index' %}"> entrar aquí</a></p> 
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+  
+  {% load static %}
+  
+ 
+<style>
+    input {
+        float: left;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        clear: both;
+        float: left;
+        width: 180px;
+    }
+
+    button {
+        clear: both;
+        float: left;
+        width: 100px;
+        margin-left: 50px;
+    }
+
+    .error-control {
+        border: 1px solid white;
+    }
+
+    label.error {
+        color: white;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .login{
+        background-color:  #004d70;
+        position: absolute;
+        margin-left:20%;
+        padding: 20px;
+        margin-top: 55px;
+    }
+
+    @media screen and (max-width: 768px){
+        .login{
+            margin-left: 5%;
+        }
+        
+    }
+    
+
+
+
+
+
+</style>
+<!--VALIDACIÓN-->
+<script>
+$(function() 
+      {
+        $("#mi-formulario").validate({
+            rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: "required"
+                   
+                }, 
+            messages: {
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                password: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficiente'
+                },
+            }
+        }); 
+    }); 
+</script>
+<!--CAJA DE LOGIN CLIENTE-->
+
+<br><br>
+    <div class="container">
+        <div class="login">
+        <form id="mi-formulario" action="{% url 'index'%}">
+            <label>Correo Electrónico: </label>
+            <input type="text" name="email" required placeholder="nombre@dominio.cl">
+            <label>Contraseña:</label>
+            <input type="password" id="password" name="password" minlength="6">
+            <button class="btn btn-success" >Ingresar</button>
+        </form>
+        </div>
+    </div>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+    
+  
+{% endblock %}

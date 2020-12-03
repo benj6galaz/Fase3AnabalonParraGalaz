@@ -1,0 +1,220 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% load static %}
+<style>
+  
+/*ESTILOS TARJETAS*/
+
+  .card-body{
+    background-color: rgb(255, 255, 255);
+    height: 250px;
+  }
+  .titulo1{
+    color:black;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 450%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .card1{
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+  }
+  .card2{
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+  }
+  .card3{
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+  }
+  .card4{
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+  }
+  /* PAGINA DE GUITARRAS */
+
+  .portada1{
+
+    width: 1000px;
+    height: 300px;
+    margin-top: 50px;
+
+
+  }
+  .tituloGuitarra{
+    color:black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 70px;
+  }
+  .card1gui{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+  }
+
+
+
+
+  .tituloGuitarra{
+  color:black;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  font-size: 70px;
+  }
+
+  .card1gui{
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  }
+
+  .cajaguitarras {
+  position: absolute;
+    width: 75%;
+    margin-left: 13%;
+
+
+  }
+</style>
+<!--CAJA DE GUITARRAS-->
+
+
+
+    <div class="cajaguitarras">
+        <div align="center">
+          <img class="portada1" src="{% static 'imagenes/Guitarras/guitarras-de-rock.jpeg'  %}">
+      </div>
+      <h3 class="tituloGuitarra"> GUITARRAS</h3>
+      <div class="row">
+          <div class="col-md-3 center" >     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/ltdbab.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">LTD M200 FM STBLK</h4>
+                  <p class="card-text"> Color negro, escala 25,5 pulgadas, material de caoba/arce, 7 cuerdas.</p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+          
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/ibanez2.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">IBANEZ S671ALB BAB</h4>
+                  <p class="card-text">Color Black Aurora,escala 648mm , Material nyatoh, 6 cuerdas</p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+          
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/framus.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">FRAMUS TELEVISION</h4>
+                  <p class="card-text">Color Nirvana Black, escala 25,5 pulgadas, material madera caoba, 6 cuerdas. </p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+          
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/fullertonUSA.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">G&L FULLERTON DELUXE ASAT</h4>
+                  <p class="card-text">Color Rojo, escala 25,5 pulgadas, material Fresno pantano, 6 cuerdas.</p>
+                  <a href="{% url 'Compra' %}" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/takamine.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">TAKAMINE TH5C</h4>
+                  <p class="card-text">Color Natural, neck caoba, material cedro, 6 cuerdas, cuerdas nylon.</p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/godinmultiac.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">GODIN MULTIAC</h4>
+                  <p class="card-text">Color Natural, escala 25,5 pulgadas, material maple, 6 cuerdas.</p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/raimundo130.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">RAIMUNDO 130</h4>
+                  <p class="card-text">Color Pino, escala 650mm, material palo santo macizo, 6 cuerdas.</p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+
+          <div class="col-md-3 center">     
+              <div class="card1gui" >
+                <div class="ltd">
+                <img class="card-img-top" src="{% static 'imagenes/Guitarras/nativaj3.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                  <h4 class="card-title">NATIVA J3</h4>
+                  <p class="card-text">Color Natural(NT), material lados y fondos palorosa, 6 cuerdas. </p>
+                  <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+              </div>       
+          </div>
+
+      </div>
+  </div>
+  </div>
+    
+  </div>
+
+    
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

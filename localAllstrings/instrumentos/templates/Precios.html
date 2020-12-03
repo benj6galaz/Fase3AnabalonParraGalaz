@@ -1,0 +1,169 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/cssPrecios.css' %}">
+
+  <style>
+      .titulo1{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+}
+.titulo2{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+}
+.titulo3{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+}
+.titulo4{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+}
+.titulo5{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 33px;
+} 
+/*BOTONES Y DATOS*/
+.label{
+    color:white;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+.boton{
+
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #4CAF50;
+    border: solid;
+    border-color: #4CAF50;
+    color: black;
+}
+.botoncont{
+    padding: 20px 40px;
+    font-size: 15px;
+    background-color: #4CAF50;
+    border: solid;
+    border-color: #4CAF50;
+    color: black;
+    margin-left: 110px;
+}
+
+.cajas{
+    background-color: #004d70;
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+
+}
+</style>
+<script type="text/JavaScript">
+                                        /*VALIDACION PRECIOS*/
+/*PRECIO DESPACHOS*/
+
+    function starken() 
+    {
+        var preciobase = 1499000;
+        var starken = parseInt(preciobase) * 1.04;
+        alert('Precio producto $' + preciobase + ', más el despacho por Starken es de $' + starken);
+        document.getElementById('nume').value="";
+        document.getElementById('nume').focus();
+    }
+
+    function chilexpress() 
+    {
+        var preciobase = 1499000;
+        var chilexpress = parseInt(preciobase) * 1.05;
+        alert('Precio producto $' + preciobase + ', más el despacho por Chilexpress es de $' + chilexpress);
+        document.getElementById('nume').value="";
+        document.getElementById('nume').focus();
+    }
+    function allstrings() 
+    {
+        var preciobase = 1499000;
+        var allstrings = parseInt(preciobase) * 1.03;
+        alert('Precio producto $' + preciobase + ', más el despacho por AllStrings es de $' + allstrings);
+        document.getElementById('nume').value="";
+        document.getElementById('nume').focus();
+    }
+    /*SEGURO*/
+    function seguro() 
+    {
+        var preciobase = 1499000;
+        var seguro = parseInt(preciobase) * 1.07;
+        alert('Precio producto $' + preciobase + ', más el 7% del seguro es de: $' + seguro);
+        document.getElementById('nume').value="";
+        document.getElementById('nume').focus();
+    }
+    /* PRECIO CON IVA/SIN IVA*/
+    function iva() 
+    {
+        var preciobase = 1499000;
+        var neto = Math.round(parseInt(preciobase) / 1.19);
+        alert('Precio producto: $' + preciobase + '. El producto sin iva es de: $' + neto);
+        document.getElementById('nume').value="";
+        document.getElementById('nume').focus();
+    }
+</script>
+</head>
+<body>
+<!--CAJAS DE PRECIOS-->
+<div class="cajas">
+    <h1 class="titulo1">Envío por Starken</h1>
+    <form>
+        <label class="label" for="usuario">Precio del producto: $1.499.000 + </label>
+        <input class="boton" type="button" name="btn1" id="multi" value="4% costo de envío por Starken" onclick="starken()">
+    </form>
+    <hr>
+    <h2 class="titulo2">Envío por Chilexpress</h2>
+    <form>
+        <label class="label" for="usuario">Precio del producto: $1.499.000 + </label>
+        <input class="boton" type="button" name="btn1" id="multi" value="5% costo de envío por Chilexpress" onclick="chilexpress()">
+    </form>
+    <hr>
+    <h3 class="titulo3">Envío por AllStrings</h3>
+    <form>
+        <label class="label" for="usuario">Precio del producto: $1.499.000 + </label>
+        <input class="boton" type="button" name="btn1" id="multi" value="3% costo de envío por AllStrings" onclick="allstrings()">
+    </form>
+    <hr>
+    <h4 class="titulo4">Seguro del producto</h4>
+    <form>
+        <label class="label" for="usuario">Precio del producto: $1.499.000 + </label>
+        <input class="boton" type="button" name="btn1" id="multi" value="7% por el seguro del producto" onclick="seguro()">
+    </form>
+    <hr>
+    <h5 class="titulo5">Precio del producto sin IVA</h5>
+    <form>
+        <label class="label" for="usuario">Precio del producto: $1.499.000 + </label>
+        <input class="boton" type="button" name="btn1" id="multi" value="Producto sin IVA" onclick="iva()">
+    </form>
+    <hr>
+    <form>
+     <a href="{% url 'Formulario' %}" class="botoncont" type="button" onclick="alert('Seras redirigido al formulario de compra')">CONTINUAR </a>
+    </form>
+
+</div>
+<br><br><br>
+</body>
+
+{% endblock %}

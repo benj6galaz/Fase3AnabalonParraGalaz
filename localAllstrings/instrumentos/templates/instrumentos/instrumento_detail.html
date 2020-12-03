@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+<h1 style="color: black;">SUGERENCIA AGREGADA:  </h1>
+</div>
+<br>
+<br>
+<div class="container d-flex flex-column"> 
+    <h1  style="color: black;"> Sugerencia: {{instrumento.nombre}}</h1>
+    <h2 style="color: black;">  Descripcion : {{instrumento.descripcion}}</h2>
+    <br>
+    <br>
+    <br>
+        <a class="btn btn-primary" href="{% url 'instrumento_update' pk=instrumento.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="{% url 'instrumento_delete' pk=instrumento.pk %}">Eliminar   <span class="glyphicon glyphicon-trash"></span></a>
+</div>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
+

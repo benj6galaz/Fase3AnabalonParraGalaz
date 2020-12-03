@@ -1,0 +1,130 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    
+.tituloCompra{
+    color:black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 48px;
+}
+.precio{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 40px;
+}
+/*IMAGEN*/
+.cajaimg img{
+    height: 500px;
+    border:solid;
+    margin-left: -210px;
+    margin-bottom: 10px;
+}
+/*INFORMACION PRODUCTO Y BOTON COMPRAR*/ 
+.botoncompra{
+    margin-left: 100px;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    border: solid;
+    border-color: black;
+    color: white;
+}
+.infogui{
+    color:black;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.infogui2{
+    color:black;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.info{
+    text-align: left;
+}
+
+.cajainfo{
+    width: 1100px;
+    height: 700px;
+    border: solid;
+    background-color: white;
+    margin-left: 200px;
+    margin-bottom: 300px;
+}
+
+ /*ESTILOS CAJA COMPRAS*/
+ .card1gui{
+    margin-top: 15px;
+    border-color: #000000;
+    border-style: solid;
+    text-align: center;
+ }
+ 
+ .card-body{
+    background-color: rgb(255, 255, 255);
+    height: 250px;
+ }
+ 
+ #h1
+ { text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 70px;
+    color: black;
+ }
+ 
+
+.comprar{
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.comprar a
+{
+   color: white;
+}
+
+
+
+
+</style>
+<!--CAJA COMPRAR-->
+<div class="comprar">
+    <h1 class="tituloCompra">GUITARRA ELÉCTRICA G&L FULLERTON DELUXE ASAT BLUESBOY</h1>
+    <h4 class="precio">PRECIO: $1.499.000</h4>
+    <div class="cajaimg" align="center">
+        <img class="compraimg" src="{% static 'imagenes/Guitarras/fullertonUSA.jpeg' %}">
+        <a href="{% url 'Precios' %}" class="botoncompra" align="right" type="button" onclick="alert('Seras redirigido a la página de compra')">COMPRAR PRODUCTO</a>
+    </div>
+    <div class="cajainfo">
+    <h2 class="infogui">CARACTERISTICAS DEL PRODUCTO</h2>
+    <p class="info">La nueva Fullerton Deluxe ASAT® Classic Bluesboy tiene un cuerpo de fresno de pantano recubierto en un acabado transparente para mostrar toda la belleza del color Blue Burst, 
+                    emparejado con un golpeador que lo realza a la perfección. 
+                    Esa elegancia continúa hasta su mástil con el acabado Vintage Gloss pulido de G&L que luce fantástico y se siente cómodo al primer tacto.</p>
+                    <p>Esta guitarra constituye la última versión de las clásicas guitarras de Leo con su mástil atornillado como de costumbre.
+                    Para los guitarristas que buscan la inconfundible calidez de un humbucker clásico en la posición del mástil, la Bluesboy ofrece una pareja bien equilibrada de un humbucker magnético G&L A2S4248N Alnico II y
+                    una cápsula single coil al puente G&L Magnetic Field Design™ diseñada por Leo.</p>
+                    <h3 class="infogui2">ESPECIFICACIONES</h3>
+                    <p>CAPSULAS: Leo Fender" -designed G&L MFD™ single coil en posición Puente. G&L A2S4248N Alnico II magnet humbucker en posición Neck</p>
+                    <p>COLOR: Blue Burst (BBT)</p>
+                    <p>CONTROLES: Selector de cápsula de 3 posiciones, volumen, tono</p>
+                    <p>ESCALA: 25,5"</p>
+                    <p>MATERIAL CUERPO: Fresno</p>
+                    <p>MATERIAL FINGERBOARD: Arce</p>
+                    <p>MATERIAL NECK: Arce</p>
+                    <p>NUMERO DE CUERDAS: 6</p>
+                    <p>TRASTES: 22 Medium Jumbo</p>
+                    <p>PUENTE: Traditional boxed-steel bridge with individual brass saddles</p>
+    </div >
+</div>
+
+{% endblock %}

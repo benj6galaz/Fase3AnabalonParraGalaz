@@ -1,0 +1,140 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+
+
+  
+  {% load static %}
+
+ <!--ESTILOS-->
+ <style>
+
+    input {
+        float: left;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        clear: both;
+        float: left;
+        width: 180px;
+    }
+
+    button {
+        clear: both;
+        float: left;
+        width: 100px;
+        margin-left: 50px;
+    }
+
+    .error-control {
+        border: 1px solid white;
+    }
+
+    label.error {
+        color: white;
+        width: 300px;
+        font-size: 0.8em;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+    color: white;
+    margin: 0px;
+    }
+
+    .cajaRegister{
+        background-color:  #004d70;
+        position: absolute;
+        margin-left:20%;
+        padding: 20px;
+        margin-top: 55px;
+    }
+
+    @media screen and (max-width: 768px){
+        .cajaRegister{
+            margin-left: 5%;
+        }
+        
+    }
+
+  </style>
+  <!--VALIDACIÓN-->
+  <script>
+      $(function() 
+      {
+        $("#mi-formulario").validate({
+             rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: "required",
+                    name:"required",
+                    password2: {
+                        required: true,
+                        equalTo: "#password"
+                    }   
+                }, //rules
+            messages: {
+                name:{
+                    required: 'Ingresa tu nombre',
+                    name: 'Ingreser un nombre'
+                },
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                password: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficiente'
+                },
+                password2: {
+                    required: 'Re-Ingresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficiente'
+
+                }
+            }
+        }); 
+    }); 
+  </script>
+  <br>
+  <br>
+ <!--CAJA DE REGISTRO CLIENTE-->
+ <div class="container">
+    <div class="cajaRegister">
+    <form id="mi-formulario" action="{% url 'index'%}">
+
+        <label>Nombre: </label>
+        <input type="text" name="name">
+
+        <label>Correo Electrónico: </label>
+        <input type="text" name="email" required placeholder="nombre@dominio.cl">
+      
+        <label>Contraseña:</label>
+        <input type="password" id="password" name="password" minlength="6">
+      
+        <label>Repetir contraseña: </label>
+        <input type="password" name="password2" minlength="6">
+      
+        <button class="btn btn-success" >Registrar</button>
+      </form>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+
+{% endblock %}

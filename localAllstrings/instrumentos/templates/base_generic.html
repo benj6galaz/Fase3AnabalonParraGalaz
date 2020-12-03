@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    {% block title %}<title>ALLSTRINGS</title>{% endblock %} 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    {% load static %}
+    
+    <link href="{%  static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"> 
+
+  
+
+<style>
+    nav{
+        background-color: #004d70;
+        color:white;
+    }
+
+    nav a{
+        color:white;
+    }
+
+    footer{
+        width: 100%;
+        background-color:#004d70 ;
+        color: azure;
+        flex-wrap: wrap;
+        position: absolute;
+
+    }
+
+    footer a{
+        color: white;
+    }
+
+    .container-footer-all{
+        width: 100%;
+        max-width: 100%;  
+
+    }
+
+    .container-body{
+        display: flex;
+        
+    }
+</style>
+
+</head>
+<!--MENÚ-->
+<body background="{% static 'imagenes/Inicio/FONDO.jpeg' %}">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">ALLSTRINGS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}"> Inicio </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'Login' %}"> Login </a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'Registrar' %}"> Registrarse </a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Productos  </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{% url 'Guitarras' %}"> Guitarras</a></li>
+                    <li><a class="dropdown-item" href="#"> Bajos</a></li>
+                    <li><a class="dropdown-item" href="#"> Teclados</a></li>
+                    <li><a class="dropdown-item" href="#"> Baterias</a></li>
+                    <li><a class="dropdown-item" href="#"> Amplificadores</a></li>
+                    <li><a class="dropdown-item" href="#"> Escolares</a></li>
+                    <li><a class="dropdown-item" href="#"> Accesorios</a></li>
+                    <li><a class="dropdown-item" href="#"> Otros</a></li>
+                </ul>
+            </li>
+        
+            </ul>
+          </div>
+        </nav>
+        
+    </header> 
+    {% block content %}{% endblock %}    
+  <!--FOOTER-->
+    <footer >
+            <div class="futer">
+                <div class="container text-md-left">
+                    <div class="row">
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    +5695465345
+                                </li>
+                                <li>
+                                    AllStrings@gmail.cl
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none">
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Redes Sociales</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                Facebook
+                            </li>
+                            <li>
+                                Twitter
+                            </li>
+                            <li>
+                                Instagram
+                            </li>
+                            </ul>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none">
+                        <div class="col-md-2 mx-auto">
+                            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Información</h5>
+                            <ul class="list-unstyled">
+                            <p>
+                                Somos una tienda dedicada a productos musicales de todo tipo, ya sean instrumentos, accesorios, componentes, entre otros
+                            </p>
+                            
+                            </ul>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none">
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Ubicación</h5>
+                                <ul class="list-unstyled">
+                                <li>
+                                    Canada #3574 Maipú
+                                </li>
+                                </ul>
+                            </div>
+                        <hr class="clearfix w-100 d-md-none">
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sugerencias</h5>
+                                <ul class="list-unstyled">
+                                <li>
+                                    Mandanos tus sugerencias o peticiones sobre algún producto <a href="{% url 'instrumento_create' %}">haciendo click aquí</a>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 mx-auto">
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lista de Sugerencias</h5>
+                                <ul class="list-unstyled">
+                                <li>
+                                    Si quieres ver la lista de sugerencias, <a href="{% url 'instrumentos' %}">click aquí</a>
+                                </li>
+                                </ul>
+                            </div>        
+                    </div>
+
+            </div>
+        
+    </footer>
+</body>
+</html>

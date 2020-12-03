@@ -1,0 +1,118 @@
+/*CSS CONTENIDO PAGINA PRINCIPAL/INICIO*/
+/*ESTILOS CARRUSEL*/
+
+.carrusel{
+    height: 550px;
+    margin-top: 50px;
+    }
+
+.tituloca{
+color: black;
+text-shadow: 2px 2px 5px rgb(255, 255, 255);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 300%;
+    }
+
+.parrafoca{
+color: black;
+text-shadow: 2px 2px 5px rgb(255, 255, 255);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 200%;
+    }
+    
+    .imagen1 img{
+    height: 500px;
+    padding: 20px;
+    }
+    .imagen2 img{
+    height: 500px;
+    padding: 20px;
+    }
+    .imagen3 img{
+    height: 500px;
+    padding: 20px;
+    }
+    /*ESTILOS TARJETAS*/
+    .card-body{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    
+    margin:0;
+    }
+    .titulo1{
+    margin-left: 0px;
+    color:black;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-align: center;
+    font-size: 450%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .ltd img{
+    height: 200px;
+    
+    }
+    .ibanez img{
+    height: 200px;
+    
+    }
+    .ludwing img{
+    height: 200px;
+    
+    }
+    .palos img{
+    height: 200px;
+    
+    }
+    .card1{
+        margin-top: 10px;
+        border-color: #00000063;
+        border-style: solid;
+        text-align: center;
+    
+    }
+    .card2{
+        margin-top: 10px;
+        border-color: #00000063;
+        border-style: solid;
+        text-align: center;
+    }
+    .card3{
+        margin-top: 10px;
+        border-color: #00000063;
+        border-style: solid;
+        text-align: center;
+    }
+    .card4{
+        margin-top: 10px;
+        border-color: #00000063;
+        border-style: solid;
+        text-align: center;
+    }
+    
+    .info {
+    background-color: brown;
+    margin-top: 115px;
+    margin-left: 150px;
+    height:  500px;
+    width: 500px;
+    }
+    .container {
+    width: 100%;
+    }
+    
+    
+    
+    .caja4{
+        width: 100%;
+        margin: auto;
+    }
+    
+    
+    @media screen and (max-width: 768px){
+        .caja4{
+            width: 400px;
+            margin: auto;
+        }
+        
+    }
+    

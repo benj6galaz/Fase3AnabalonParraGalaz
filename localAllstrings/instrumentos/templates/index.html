@@ -1,0 +1,151 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    {% load static %}
+        <link href="{%  static 'css/cssInicio.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="carrusel">
+        <div class=container>
+            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel1" data-slide-to="1"></li>
+                    <li data-target="#carousel1" data-slide-to="2"></li>
+                </ol>
+                <!--DIAPOSITIVAS PRINCIPAL/INCIO-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="imagen1">
+                            <img class="d-block w-100" src="{% static 'imagenes/Inicio/Cyberday-fondo-azul.jpeg' %}" alt="">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="tituloca">OFERTAS CYBERDAY</h3>
+                            <p class="parrafoca">¡APROVECHAS ESTAS IMPERDIBLES OFERTAS!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="imagen2">
+                            <img class="d-block w-100" src="{% static 'imagenes/Inicio/instrumentosmusicales.jpeg' %}" alt="">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="tituloca">OFERTAS CYBERDAY</h3>
+                            <p class="parrafoca">¡APROVECHAS ESTAS IMPERDIBLES OFERTAS!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="imagen3">
+                            <img class="d-block w-100" src="{% static 'imagenes/Inicio/uñetas.jpeg' %}" alt="">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="tituloca">OFERTAS CYBERDAY</h3>
+                            <p class="parrafoca">¡APROVECHAS ESTAS IMPERDIBLES OFERTAS!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTONES DE DESPLAZAMIENTO IZQUIERDA A DERECHA-->
+                <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel1" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <style>
+                    .carousel-control-prev-icon {
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+                    }
+                            
+                    .carousel-control-next-icon {
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+                    }
+
+                    @media (width: 767px){
+                    .caja4{
+                        width: 400px;
+                        margin: auto;
+                    }
+                    
+                }
+
+                </style>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="titulo1">NOVEDADES</h1>
+    <div class="caja4">
+        <div class="container">   
+            <div class="row" >      
+            <div class="col-md-3 center">     
+                <div class="card1" >
+                    <div class="ltd">
+                    <img class="card-img-top" src="{% static 'imagenes/Inicio/ltdbab.jpeg' %}">
+                    </div>            
+                    <div class="card-body">
+                    <h4 class="card-title">LTD M200 FM STBLK</h4>
+                    <p class="card-text">Color negro, escala 25,5 pulgadas, material de caoba/arce, 6 cuerdas.</p>
+                    <a href="{% url 'Login' %}" class="btn btn-success">COMPRAR</a>
+                    </div>
+                </div>       
+            </div>
+            <div class="col-md-3 center">       
+                <div class="card2">
+                <div class="ibanez">
+                <img class="card-img-top" src="{% static 'imagenes/Inicio/ibanez2.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                    <h4 class="card-title">IBANEZ S671ALB BAB</h4>
+                    <p class="card-text">Color Black Aurora,escala 648mm , Material nyatoh, 6 cuerdas.</p>
+                    <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+                </div>         
+            </div>
+            <div class="col-md-3 center">         
+                <div class="card3">
+                <div class="ludwing">
+                <img class="card-img-top" src="{% static 'imagenes/Inicio/tramaclassic.jpeg' %}">
+                </div>            
+                <div class="card-body">
+                    <h4 class="card-title">TAMA STARCLASSIC</h4>
+                    <p class="card-text">Material maple, herrajes black nickel, nro piezas 4, serie Starclassic maple.</p>
+                    <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+                </div>        
+            </div>
+            <div class="col-md-3 center">        
+                <div class="card4">
+                <div class="palos">
+                <img class="card-img-top" src="{% static 'imagenes/Inicio/zildjian.jpeg' %}">         
+                </div>   
+                <div class="card-body">
+                    <h4 class="card-title">ZILDJIAN STARR ARTIST SERIES</h4>
+                    <p class="card-text">Material punta madera, medidas 16 largo, diametro 0,5.</p>
+                    <a href="#" class="btn btn-success">COMPRAR</a>
+                </div>
+                </div>         
+            </div>
+            </div>
+        </div>
+    </div>
+      
+    <br>
+    <br>
+    <br>
+    <br>
+    <h7><strong>INSTRUMENTOS<strong></h7>
+        <ul>
+        <li><strong>Cantidad de instrumentos musicales: </strong>{{num_instrumentos}}</li>
+        </ul>  
+</body>
+</html>
+{% endblock %}
